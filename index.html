@@ -5,7 +5,7 @@
     <meta charset="UTF-8"> <!-- this specifies the character encoding for the HTML document -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- this is for compatibility with Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- this is for responsive design -->
-    <link rel="icon" type="image/jpeg" href="/Puffys/images/Logo.jpg"> <!-- this is for the favicon -->
+    <link rel="icon" type="image/png" href="/Puffys/images/Logo.png"> <!-- this is for the favicon -->
     <title>Puffy's Smoke &amp; Vape | Gary, Indiana</title>
     <meta name="description" content="Gary's #1 smoke shop. Vapes, hookahs, CBD, glass, accessories and more. Walk-ins welcome." />
     <!-- Google Fonts -->
@@ -36,7 +36,7 @@
     <a href="tel:+1(219) 803-6714" class="float-call" aria-label="Call us">📞</a>
 
     <!-- Navigation -->
-      <img src="images/Logo.jpg" alt="Puffy's Smoke and Vape" onerror="this.classList.add('error')" />
+      <img src="images/Logo.png" alt="Puffy's Smoke and Vape" onerror="this.classList.add('error')" />
       <span class="nav-logo-text">PUFFY'S</span>
     </a>
     <ul class="nav-links">
@@ -44,7 +44,9 @@
       <li><a href="#hours">Hours</a></li>
       <li><a href="#location">Location</a></li>
       <li><a href="tel:+1(219) 803-6714" class="nav-call">Call Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
     </ul>
+    <div class="nav-spacer"></div>
   </nav>     
 
   <!-- Hero -->
@@ -75,10 +77,9 @@
   </div>
  
   <!--products-->
-  <!-- ═══════════════════════════════════
+  <!--
        PRODUCTS
-       Add / remove / rename cards as needed
-  ══════════════════════════════════════ -->
+       Add / remove / rename cards as needed-->
   <section id="products">
     <p class="section-label">What we carry</p>
     <h2 class="section-title">SHOP OUR<br>SELECTION</h2>
@@ -153,12 +154,97 @@
     <p class="section-label">Find us</p>
     <h2 class="section-title">WHERE<br>WE'RE AT</h2>
  
-    <!-- ↓ Update this address text and the Google Maps href -->
+    <!--  Google Maps href -->
     <p style="color: var(--muted); font-size: 15px; margin-bottom: 4px;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.7958964705404!2d-87.40643902329296!3d41.57366177127673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811dd61b1cd16ef%3A0xe143dd7dc5a3f276!2sPuffy&#39;s%20Smoke%20%26%20Vape!5e0!3m2!1sen!2sus!4v1777037459476!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </p>
- 
-    <div class="map-wrapper">
-
     </div>
   </section>
+
+
+   <!-- GALLERY — move this BEFORE footer -->
+  <hr class="divider" />
+  <section id="gallery">
+    <p class="section-label">Take a look</p>
+    <h2 class="section-title">GALLERY</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/IMG_0272.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0271.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0275.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0273.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0274.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0278.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0277.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0276.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0279.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+      <div class="gallery-item"><img src="images/IMG_0281.png" alt="Puffy's Smoke and Vape" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">PUFFY'S</span>
+    <p>Smoke &amp; Vape &bull; Gary, Indiana</p>
+    <p style="margin-top: 6px;">
+      <a href="tel:+1(219) 803-6714" class="footer-phone">(219) 803-6714</a>
+    </p>
+    <p class="footer-disclaimer">
+      Must be 21 or older to purchase. Please consume responsibly.
+      &copy; <span id="year"></span> Puffy's Smoke and Vape. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- LIGHTBOX — must be before the script -->
+  <div id="lightbox">
+    <button id="lb-close">✕</button>
+    <button id="lb-prev">‹</button>
+    <img id="lb-img" src="" alt="" />
+    <button id="lb-next">›</button>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function enterSite() {
+      document.getElementById('age-gate').style.display = 'none';
+      sessionStorage.setItem('age_verified', '1');
+    }
+
+    function denyEntry() {
+      document.getElementById('age-gate').innerHTML =
+        '<div class="age-gate-box">' +
+          '<div class="age-gate-logo" style="color:#444">PUFFY\'S</div>' +
+          '<p style="color:#555; margin-top:24px; font-size:15px;">Sorry, you must be 21 or older to enter this site.</p>' +
+        '</div>';
+    }
+
+    if (sessionStorage.getItem('age_verified')) {
+      document.getElementById('age-gate').style.display = 'none';
+    }
+
+    // Lightbox
+    const imgs = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    let current = 0;
+
+    function openLb(index) { current = index; lbImg.src = imgs[current].src; lb.classList.add('open'); }
+    function closeLb() { lb.classList.remove('open'); }
+    function prevImg() { current = (current - 1 + imgs.length) % imgs.length; lbImg.src = imgs[current].src; }
+    function nextImg() { current = (current + 1) % imgs.length; lbImg.src = imgs[current].src; }
+
+    imgs.forEach((img, i) => img.parentElement.addEventListener('click', () => openLb(i)));
+    document.getElementById('lb-close').addEventListener('click', closeLb);
+    document.getElementById('lb-prev').addEventListener('click', prevImg);
+    document.getElementById('lb-next').addEventListener('click', nextImg);
+    lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowRight') nextImg();
+      if (e.key === 'ArrowLeft')  prevImg();
+      if (e.key === 'Escape')     closeLb();
+    });
+  </script>
+
+</body>
+</html>
