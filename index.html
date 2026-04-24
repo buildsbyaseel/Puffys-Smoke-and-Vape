@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8"> <!-- this specifies the character encoding for the HTML document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- this is for compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- this is for responsive design -->
+    <link rel="icon" type="image/jpeg" href="/Puffys/images/Logo.jpg"> <!-- this is for the favicon -->
+    <title>Puffy's Smoke &amp; Vape | Gary, Indiana</title>
+    <meta name="description" content="Gary's #1 smoke shop. Vapes, hookahs, CBD, glass, accessories and more. Walk-ins welcome." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+ 
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <!-- Age Gate -->
+        <div id="age-gate">
+            <div class = "age-gate-box">
+                <div class="age-gate-logo">PUFFY'S</div>
+                <p class="age-gate-sub">Smoke &amp; Vape &bull; Gary, IN</p>
+
+                <h2 class="age-gate-heading">Are you 21 or older?</h2>
+                <p class="age-gate-fine">You must be 21+ to enter this site. By clicking "Yes" you confirm you meet the age requirement and agree to our terms.</p>
+                <div class="age-btn-group">
+                    <button class="btn-yes" onclick="enterSite()">Yes, I'm 21+</button>
+                    <button class="btn-no"  onclick="denyEntry()">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Call button-->
+    <a href="tel:+1(219) 803-6714" class="float-call" aria-label="Call us">📞</a>
+
+    <!-- Navigation -->
+      <img src="images/Logo.jpg" alt="Puffy's Smoke and Vape" onerror="this.classList.add('error')" />
+      <span class="nav-logo-text">PUFFY'S</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="tel:+1(219) 803-6714" class="nav-call">Call Us</a></li>
+    </ul>
+  </nav>     
+
+  <!-- Hero -->
+  <div class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="smoke-rings" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+ 
+    <p class="hero-eyebrow">Gary, Indiana's #1 Smoke Shop</p>
+    <h1 class="hero-title">PUFFY'S<br><span>SMOKE</span><br>&amp; VAPE</h1>
+    <p class="hero-subtitle">Your go-to spot for vapes, hookahs, CBD, glass, and everything in between.</p>
+ 
+    <div class="hero-actions">
+      <a href="tel:+1(219) 803-6714" class="btn-primary">📞 Call Now</a>
+      <a href="#location" class="btn-outline">Find Us →</a>
+    </div>
+  </div>
+  
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <span class="ticker-track">
+      &nbsp;&nbsp;VAPES &bull; HOOKAHS &bull; CBD &bull; GLASS PIPES &bull; ROLLING PAPERS &bull; ACCESSORIES &bull; DELTA  &bull; DISPOSABLES &bull; TOBACCO &bull; LIGHTERS &bull; GRINDERS &bull;
+      &nbsp;&nbsp;VAPES &bull; HOOKAHS &bull; CBD &bull; GLASS PIPES &bull; ROLLING PAPERS &bull; ACCESSORIES &bull; DELTA  &bull; DISPOSABLES &bull; TOBACCO &bull; LIGHTERS &bull; GRINDERS &bull;
+    </span>
+  </div>
+ 
+  <!--products-->
+  <!-- ═══════════════════════════════════
+       PRODUCTS
+       Add / remove / rename cards as needed
+  ══════════════════════════════════════ -->
+  <section id="products">
+    <p class="section-label">What we carry</p>
+    <h2 class="section-title">SHOP OUR<br>SELECTION</h2>
+ 
+    <div class="products-grid">
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">💨</span>
+        <div class="product-name">Vapes</div>
+        <div class="product-desc">Disposables, mods, pods &amp; juice</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">🪔</span>
+        <div class="product-name">Hookah</div>
+        <div class="product-desc">Shisha, charcoal, full sets</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">🌿</span>
+        <div class="product-name">CBD &amp; Delta 8</div>
+        <div class="product-desc">Gummies, tinctures, carts</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">🔮</span>
+        <div class="product-name">Glass</div>
+        <div class="product-desc">Pipes, bubblers, bongs</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">🚬</span>
+        <div class="product-name">Tobacco</div>
+        <div class="product-desc">Cigars, cigarettes, RYO</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon" aria-hidden="true">🛒</span>
+        <div class="product-name">Accessories</div>
+        <div class="product-desc">Papers, lighters, grinders &amp; more</div>
+      </div>
+    </div>
+  </section>
+ 
+  <hr class="divider" />
+
+<!-- Hours and contact information -->
+  <section id="hours">
+    <p class="section-label">Come visit us</p>
+    <h2 class="section-title">HOURS &amp;<br>INFO</h2>
+ 
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Store Hours</h3>
+
+        <div class="info-row"><span class="label">Mon – Sat</span><span class="value">10am – 9pm</span></div>
+        <div class="info-row"><span class="label">Sunday</span><span class="value">12pm – 6pm</span></div>
+      </div>
+ 
+      <div class="info-card">
+        <h3>Contact</h3>
+
+        <div class="info-row"><span class="label">Phone</span><span class="value accent">(219) 803-6714</span></div>
+        <div style="margin-top: 18px;">
+          <a href="tel:+1(219) 803-6714" class="btn-primary" style="font-size: 18px; padding: 12px 24px;">
+            📞 Tap to Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <hr class="divider" />
+
+
+  <!-- Location and map -->
+  <section id="location">
+    <p class="section-label">Find us</p>
+    <h2 class="section-title">WHERE<br>WE'RE AT</h2>
+ 
+    <!-- ↓ Update this address text and the Google Maps href -->
+    <p style="color: var(--muted); font-size: 15px; margin-bottom: 4px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.7958964705404!2d-87.40643902329296!3d41.57366177127673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811dd61b1cd16ef%3A0xe143dd7dc5a3f276!2sPuffy&#39;s%20Smoke%20%26%20Vape!5e0!3m2!1sen!2sus!4v1777037459476!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+ 
+    <div class="map-wrapper">
+
+    </div>
+  </section>
